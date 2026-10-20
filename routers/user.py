@@ -1,13 +1,14 @@
 from fastapi import APIRouter,Form
-from ..models.models import User,Departament,Position
+from ..models.user import User,Departament,Position
+from ..database.config import FileDatabase
 
+database = FileDatabase("users",User)
 
-
-routers_user= APIRouter(
+user = APIRouter(
     prefix="/user",
     tags=["user"])
 
-@routers_user.post("/")
+@user.post("/")
 async def create_user(
     id:int = Form(),
     name:str = Form(),

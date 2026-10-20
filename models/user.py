@@ -24,4 +24,4 @@ class Called(BaseModel):
     id:int
     title :str
     user_id : int
-    departament_id : id
+    departament_id : int
