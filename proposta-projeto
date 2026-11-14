@@ -1,0 +1,98 @@
+Entendi\! Nesse caso, minha recomendação é selecionar apenas uma estrutura ou algoritmo para cada assunto da disciplina, priorizando aqueles que realmente fazem sentido no gerenciamento de chamados.
+
+Eu também faria alguns ajustes na sua lista para evitar estruturas redundantes e deixar cada uma responsável por uma funcionalidade específica.
+
+# 1. Estruturas de dados
+
+| Assunto | Estrutura escolhida | Aplicação no sistema |
+| --- | --- | --- |
+| Listas | Lista encadeada | Armazenar os chamados e seus históricos de movimentação. |
+| Listas de prioridades | Heap (Max-Heap) | Organizar os chamados conforme a urgência, priorizando os críticos. |
+| Hashing | Tabela Hash | Buscar, inserir e remover chamados rapidamente pelo ID. |
+| Árvores balanceadas | Árvore AVL | Organizar chamados por ID, permitindo consultas ordenadas e eficientes. |
+| Busca digital | Trie | Pesquisar chamados pelos prefixos dos títulos. |
+| Grafos | Grafo com lista de adjacência | Representar dependências entre chamados e departamentos. |
+
+### Por que essas escolhas?
+
+- Lista encadeada: é interessante porque os chamados podem ser inseridos e removidos dinamicamente. Também pode ser utilizada para registrar o histórico de cada chamado.
+- Heap: é essencial para o funcionamento da fila de atendimento por prioridade. Um chamado crítico não deve ficar atrás de um chamado de baixa prioridade.
+- Hash: permite localizar um chamado diretamente pelo seu identificador, sem precisar percorrer todos os registros.
+- AVL: permite manter os chamados organizados por ID, com operações eficientes de busca, inserção e remoção.
+- Trie: oferece uma funcionalidade de pesquisa textual por prefixos, facilitando a localização de chamados pelo título.
+- Grafo: permite representar chamados que dependem da resolução de outros chamados antes de serem concluídos.
+
+# 2. Algoritmos
+
+Aqui também escolheria apenas um algoritmo para cada necessidade.
+
+| Assunto | Algoritmo escolhido | Aplicação |
+| --- | --- | --- |
+| Ordenação | Merge Sort | Ordenar chamados por data de abertura ou prazo. |
+| Busca | Busca binária | Localizar chamados em uma coleção previamente ordenada. |
+| Grafos | BFS | Identificar chamados ou departamentos relacionados por dependências. |
+| Grafos | Ordenação topológica | Determinar a sequência correta de resolução dos chamados dependentes. |
+| Processamento de cadeias | KMP | Pesquisar palavras e expressões dentro das descrições dos chamados. |
+
+Uma observação: BFS e ordenação topológica possuem finalidades diferentes. A BFS percorre o grafo por níveis, enquanto a ordenação topológica determina uma sequência válida de execução das tarefas dependentes.
+
+A ordenação topológica só funciona quando o grafo de dependências não possui ciclos.
+
+# 3. Funcionalidades do sistema
+
+Eu organizaria o CRUD e as funcionalidades complementares desta maneira:
+
+| Funcionalidade | Estrutura utilizada |
+| --- | --- |
+| Cadastrar chamado | Lista encadeada + Hash + AVL |
+| Consultar chamado por ID | Hash |
+| Atualizar chamado | Hash |
+| Remover chamado | Hash + AVL + Lista encadeada |
+| Gerar identificador único | Contador sequencial |
+| Definir prioridade | Heap |
+| Organizar atendimento | Heap |
+| Consultar chamados por prefixo | Trie |
+| Pesquisar descrição | KMP |
+| Ordenar por data ou prazo | Merge Sort |
+| Registrar histórico | Lista encadeada |
+| Relacionar chamados dependentes | Grafo |
+| Identificar dependências | BFS |
+| Determinar ordem de resolução | Ordenação topológica |
+| Gerar relatórios | Lista encadeada + Merge Sort |
+
+# 4. Como ficaria o funcionamento na prática?
+
+Imagine o seguinte cenário:
+
+Um departamento de Financeiro abre um chamado informando que não consegue acessar o sistema de pagamentos.
+
+1. Cadastro: o chamado é inserido na lista encadeada, na tabela Hash e na AVL.
+2. Priorização: o chamado recebe prioridade alta e é inserido no Heap.
+3. Atendimento: o sistema identifica qual chamado possui maior prioridade.
+4. Histórico: cada alteração de status é registrada em uma lista encadeada.
+5. Dependência: caso a resolução dependa de outro chamado da TI, essa relação é representada no grafo.
+6. Pesquisa: o usuário pode localizar o chamado pelo ID usando Hash ou pelo título usando Trie.
+7. Encerramento: o chamado é removido da fila de atendimento e atualizado nas estruturas correspondentes.
+
+# 5. Minha seleção definitiva para o trabalho
+
+RecomendaçãoEu manteria exatamente esta seleção como escopo principal:
+
+| Conteúdo da disciplina | Implementação |
+| --- | --- |
+| Árvores balanceadas | AVL |
+| Listas de prioridades | Max-Heap |
+| Hashing | Tabela Hash com tratamento de colisões |
+| Busca digital | Trie |
+| Grafos | Lista de adjacência + BFS |
+| Processamento de cadeias | KMP |
+| Ordenação | Merge Sort |
+| Busca | Busca binária |
+| Dependências | Ordenação topológica |
+
+Dois detalhes importantes para a implementação:
+
+1. A busca binária e a Hash possuem finalidades diferentes. A Hash será utilizada para consultas diretas por ID, enquanto a busca binária poderá ser utilizada em coleções ordenadas, por exemplo, para localizar chamados em uma listagem organizada.
+2. Como você utilizará várias estruturas para os mesmos chamados, será importante manter todas sincronizadas. O encerramento de um chamado, por exemplo, deverá removê-lo do Heap, mas não necessariamente da Hash ou da AVL, pois ele ainda precisará estar disponível para consultas e relatórios.
+
+Minha opinião é que essa seleção está muito bem alinhada à disciplina e ao problema proposto. Você consegue demonstrar praticamente toda a ementa sem precisar implementar estruturas repetidas ou funcionalidades artificiais.
