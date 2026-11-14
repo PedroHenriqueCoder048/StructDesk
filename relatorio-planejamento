@@ -1,0 +1,16 @@
+Olá, Chat! Vou desenvolver um trabalho para a disciplina de Estrutura de Dados e Algoritmos II. Os assuntos abordados na disciplina são:
+
+Introdução: estudar mais profundamente as estruturas de dados e os algoritmos, além de escolher a melhor estrutura de dados para cada problema.
+Árvores balanceadas: problema da árvore degenerada e como resolvê-lo por meio de balanceamento, utilizando árvores AVL e Rubro-Negra.
+Listas de prioridades: elementos com diferentes níveis de urgência, construção de listas de prioridades, inserção e remoção de elementos e alteração de prioridades.
+Tabelas de dispersão (Hashing): busca em grandes conjuntos de dados, cálculo direto do endereço, funções de dispersão, tabelas hash e tratamento de colisões.
+Busca digital: busca eficiente por palavras, códigos e prefixos, utilizando árvores TRIE, árvores TRIE binárias e árvores Patricia.
+Grafos: representação dos relacionamentos entre os dados, definições básicas, buscas, caminhos e representação computacional.
+Processamento de cadeias de caracteres: busca de informações em grandes volumes de dados, algoritmos de compressão e descompressão e localização de padrões.
+O trabalho deverá consistir no desenvolvimento de um CRUD que não utilize banco de dados, mas sim estruturas de dados para organizar e manipular as informações.
+
+O sistema escolhido será um Sistema de Gerenciamento de Chamados, no qual cada chamado será aberto por um departamento de uma empresa. Cada chamado deverá passar pelas etapas de abertura, verificação e encerramento.
+
+Além disso, o sistema deverá organizar os chamados utilizando estruturas de dados e implementar algoritmos de busca eficientes para cada situação.
+
+Com base nos assuntos apresentados acima, indique quais algoritmos podem ser utilizados em cada parte do sistema, apontando o que seria interessante implementar e por qual motivo. Não desenvolva o sistema nem sua implementação, apenas apresente sugestões do que pode ser utilizado e suas respectivas justificativas.
