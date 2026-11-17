@@ -1,3 +1,5 @@
+from hashlib import sha256
+
 class TableHash:
     '''Aqui trabalhamos com o hash dos elementos
     '''
@@ -19,6 +21,12 @@ class TableHash:
     def search_index(self,key):
         return hash(key) % self.__current_capacity
         
+    @staticmethod
+    def __deterministic_hash(key):
+        return int(sha256(key.encode()).hexdigest(),16)
+
+
+        
     def __setitem__(self,key,value):
         pass
         
@@ -28,6 +36,6 @@ chamado = TableHash()
 chamado["cod"] ="1234"
 chamado["solicitante"] = "Contabilidade"
 chamado["solicitado"] = "TI"
+chamado["hora"] ="12:20"
 chamado["prioridade"] ="baixo"
 
-print(chamado)
