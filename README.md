@@ -49,6 +49,18 @@
 | BFS                 | Percurso em grafo: O(V + E) |
 | DFS                 | Percurso em grafo: O(V + E) |
 
+<p>Porque ultilizar essas estrutura ?, existem estruturas acimas que resolvem o mesmo problema, mas a questão é que quando vamos usar estrutura de dados,
+precisamos pensar no Big(O) em que aquela tarefa executa em certa operação , um exemplo disso é a imagem a seguir:</p>
+
+| Operação           | Pilha | Fila | Lista Encadeada |
+| ------------------ | ----- | ---- | --------------- |
+| Inserir            | O(1)  | O(1) | O(1)\*          |
+| Remover            | O(1)  | O(1) | O(1)\*          |
+| Buscar             | O(n)  | O(n) | O(n)            |
+| Consultar elemento | O(1)  | O(1) | O(n)            |
+
+\*Considerando inserção e remoção no início da lista encadeada.
+
 ## 5. Objetivo acadêmico
 
 <p>O objetivo será implementar os conhecimento adquiridos no curso e ver como a implementação pode ser feita por baixo dos panos no dia a dia</p>
