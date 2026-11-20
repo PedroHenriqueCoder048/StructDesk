@@ -54,10 +54,10 @@ precisamos pensar no Big(O) em que aquela tarefa executa em certa operação , u
 
 | Operação           | Pilha | Fila | Lista Encadeada | Hash Table |
 | ------------------ | ----- | ---- | --------------- | ---------- |
-| Inserir            | O(1)  | O(1) | O(1)\*          | O(1)\*\*   |
-| Remover            | O(1)  | O(1) | O(1)\*          | O(1)\*\*   |
-| Buscar             | O(n)  | O(n) | O(n)            | O(1)\*\*   |
-| Consultar elemento | O(1)  | O(1) | O(n)            | O(1)\*\*   |
+| Inserir            | O(1)  | O(1) | O(1)\*          | O(1)\*\   |
+| Remover            | O(1)  | O(1) | O(1)\*          | O(1)\*\   |
+| Buscar             | O(n)  | O(n) | O(n)            | O(1)\*\   |
+| Consultar elemento | O(1)  | O(1) | O(n)            | O(1)\*\   |
 
 - **O(1):** tempo constante.
 - **O(n):** tempo linear.
