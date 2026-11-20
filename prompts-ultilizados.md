@@ -1,4 +1,4 @@
-#Prompts ultilizados no trabalho para o desenvolvimento do tabalho 
+# Prompts ultilizados no trabalho para o desenvolvimento do tabalho 
 
 - Prompt ultilizado para eu ver como depois de trabalha com hash e LinkedList na hora de trabalhar com tabelas de dispersão por encadeamento:
   claude , estou fazendo um trabalho de estrutura de dados e algoritmos 2 da faculdade , e esses são os assunto que eu usarei para criar a minha aplicação,
