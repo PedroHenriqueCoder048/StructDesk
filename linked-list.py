@@ -23,6 +23,16 @@ class Queue(LinkedList):
         while(current is not None):
             print(current.value.__dict__)
             current = current.next
+            
+    def search(self,key):
+        current = self.head
+        
+        while current is not None:
+            if current.value.key == key:
+                return current.value
+            
+            current = current.next
+        return None
 
     def insert(self,value):
         new_node = Node(value)
@@ -38,6 +48,14 @@ class Queue(LinkedList):
     def remove(self):
         if self.head is not None:
             self.head = self.head.next
+         
+        removed = self.head.value
+        self.head = self.head.next
+           
+        if self.head is None:
+            self.tail = None
+                
+        return removed
 
 class Stack(LinkedList):
     
@@ -54,9 +72,16 @@ class Stack(LinkedList):
         print(f"{new_node.value.__dict__}\n adicionado")
         
     def pop(self):
+        
+        if self.head is None:
+            return None
+        
         current = self.head
         print(f"{current.value.__dict__}\n removido")
         self.head = current.next
+        
+        if self.head.next is None:
+            self.tail = None
     
 
 list_users = [
