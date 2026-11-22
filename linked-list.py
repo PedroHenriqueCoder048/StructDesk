@@ -1,3 +1,10 @@
+class User:
+    def __init__(self,name,age,departament):
+        self.name= name
+        self.age = age
+        self.departament = departament
+
+
 class Node:
     def __init__(self,value):
         self.value = value
@@ -7,6 +14,8 @@ class LinkedList:
     def __init__(self):
         self.head = None
         self.tail =self.head
+
+class Queue(LinkedList):
     
     def show(self):
         current =  self.head
@@ -26,18 +35,30 @@ class LinkedList:
             self.tail.next = new_node
             self.tail = new_node
 
-    def update(self,id):
-        current =  self.heap
-
-        while
-
     def remove(self):
         if self.head is not None:
             self.head = self.head.next
 
-
-linkedi_list = LinkedList()
+class Stack(LinkedList):
     
+    def push(self,value):
+        new_node = Node(value)
+        current = self.head
+        if self.head == None:
+            self.head = new_node
+            self.tail = self.head
+        else:
+            self.head = new_node
+            self.head.next = current
+    
+        print(f"{new_node.value.__dict__}\n adicionado")
+        
+    def pop(self):
+        current = self.head
+        print(f"{current.value.__dict__}\n removido")
+        self.head = current.next
+    
+
 list_users = [
     ["pedro",21,"TI"],
     ["Ana ",28,"Contabilidade"],
@@ -45,15 +66,11 @@ list_users = [
     ["Claudia",26,"Rh"],
     ]
 
+stack_list = Stack()
 
 for data in list_users:
     user =  User(data[0],data[1],data[2])
-    linkedi_list.insert(user)
+    stack_list.push(user)
 
-linkedi_list.show()
-
-linkedi_list.remove()
-
-print("-----------------\n")
-
-linkedi_list.show()
+stack_list.pop()
+# queue_list.show()
