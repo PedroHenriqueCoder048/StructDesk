@@ -46,12 +46,12 @@ class TableHash:
     
         self.__size += 1
         
-    def __getitem__(self,key):
+    def __getitem__(self, key):
         index = self.search_index(key)
-
-        try: 
-            element = self.__internal_table[index].search(key)
-            if element is not None:
-                return element.value
-        except Exception as ex:
-            print(f"ocorreu o Erro:{ex}\n chave {key} não existe")
+    
+        element = self.__internal_table[index].search(key)
+    
+        if element is None:
+            raise KeyError(key)
+    
+        return element.value
