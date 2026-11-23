@@ -9,6 +9,7 @@ class User:
 
 class LinkedList:
     def __init__(self):
+        self.value = None
         self.head = None
         self.tail =self.head
 
