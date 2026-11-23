@@ -1,15 +1,11 @@
+import Node
+
 class User:
     def __init__(self,name,age,departament,cod):
         self.name= name
         self.age = age
         self.departament = departament
         self.id = cod
-
-
-class Node:
-    def __init__(self,value):
-        self.value = value
-        self.next = None
 
 class LinkedList:
     def __init__(self):
